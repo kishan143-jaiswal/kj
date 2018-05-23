@@ -1,0 +1,25 @@
+
+{
+    "users_info":[
+        {
+            "name":"kishan",
+            "email":"kishan@gmail.com",
+            "address":"vapi"
+        },
+        {
+            "name":"naren",
+            "email":"naren@gmail.com",
+            "address":"gunjan"
+        },
+        {
+            "name":"hemant",
+            "email":"hemant@gmail.com",
+            "address":"surat"
+        },
+        {
+            "name":"bhavesh",
+            "email":"bhavesh@gmail.com",
+            "address":"patiya"
+        }
+    ]
+    }

@@ -1,0 +1,21 @@
+
+{
+"data":[
+    {
+        "username":"kishan",
+        "password":"jaiswal"
+    },
+    {
+        "username":"naren",
+        "password":"chouhan"
+    },
+    {
+        "username":"hemant",
+        "password":"patel"
+    },
+    {
+        "username":"bhavesh",
+        "password":"patel"
+    }
+]
+}
