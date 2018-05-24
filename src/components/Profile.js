@@ -3,6 +3,7 @@ import bindfunc from '../util';
 import Dashboard from './Dashboard';
 import {Redirect} from 'react-router-dom';
 import users_info from '../dummy_data/localData';
+import '../css/profile.css'
 
 class Profile extends React.Component{
     constructor(props){
@@ -61,13 +62,20 @@ class Profile extends React.Component{
 
             for(let i in state_data){
                 if(props_data===state_data[i].name){
+                    
                     view=(
-                        <div>
+                        <div className="row">
+                        <div className="col-md-5 col-sm-5 col-lg-5 col-xs-5"></div>
+                        <div className="col-md-7 col-sm-7 col-lg-7 col-xs-7 ">
+                           <span className="h1_tag"> <h1>Users-Information</h1></span>
                             <h3>Name:{state_data[i].name}</h3>
                             <h3>Email:{state_data[i].email}</h3>
                             <h3>Address:{state_data[i].address}</h3>
-                            </div>
+                        </div>
+                       
+                        </div>
                         )
+                      
                         break;
                     
                 }
@@ -78,8 +86,8 @@ class Profile extends React.Component{
                                    <div>
                                        Name:<input type="text" ref="name" placeholder="insert user name"/><br/>
                                        Email:<input type="text" ref="email" placeholder="insert user email"/><br/>
-                                       Address:<input type="text" ref="address" placeholder="insert user address"/><br/>
-                                       <input type="button" value="AddInfo" onClick={this.addInfo} /><br/>
+                                       Address:<input type="text" ref="address" placeholder="insert user address"/><br/><br/>
+                                       <input type="button" className="btn btn-primary" value="AddInfo" onClick={this.addInfo} /><br/>
                                     </div>
     
                                ) 

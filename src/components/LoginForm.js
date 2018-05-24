@@ -3,7 +3,7 @@ import Mydata from '../dummy_data/data';
 import '../index';
 import {Redirect} from 'react-router-dom';
 import bindfunc from '../util';
-
+import '../css/loginform.css'
 class LoginForm extends React.Component{
     constructor(props){
       
@@ -43,32 +43,32 @@ class LoginForm extends React.Component{
 
 	render(){
         
-        var Span;
+        
         if(this.state.path){
             return (<Redirect to=
                                 {{pathname:'/dashboard'}}/>)
         }
+
 		return(
 			<div >
-                <form >
+                <form style={{textAlign:"center"}}>
+               <span className="h1_tag" > <h1>LOGIN-FORM</h1></span>
                  <div >
-                    UserName:<input type="text"
+                     UserName:<input type="text" 
                      name="uname" value={this.state.username} 
-                     onChange={(text)=>this.setState({ username:text.target.value})
-                   } placeholder="username" />
+                     onChange={(text)=>this.setState({ username:text.target.value})}
+                     placeholder="username" />
                   
                      <br/>
-                    
+                     <br/>
 
                     Password:<input type="password" 
                     name="pwd" value={this.state.password}
-                     onChange={(text)=>this.setState({password: text.target.value })
-                                   
-                                   
-                   } 
-                   placeholder="password"/><br/>
+                    onChange={(text)=>this.setState({password: text.target.value }) } 
+                    placeholder="password"/><br/><br/>
+
                    </div>
-                    <button type="button"
+                    <button type="button" className="btn btn-primary"
                      onClick={()=>this.logIn(this.state.username,this.state.password)}>Submit</button>
                 </form>
                 

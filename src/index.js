@@ -5,7 +5,6 @@ import Data from './components/Data';
 import {Route,BrowserRouter} from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import EditProfile from './components/editProfile';
 
 ReactDOM.render(<BrowserRouter>

@@ -43,22 +43,35 @@ class Dashboard extends React.Component{
       //  localStorage.setItem('users_info',JSON.stringify(users_info));
         return(
            <div >
-                <ul>
-                <h3 >List of Users</h3>
-                <input type="button" value="AddUser" onClick={this.addUser}/><br/><br/>
+           <span style={{textAlign:"center"}}> <h2 >List of Users</h2></span>
+           <input type="button"  className="btn btn-primary" value="AddUser" onClick={this.addUser}/><br/><br/>
+           <div>
 
-                        {this.state.users.users_info.map((data,index)=>
-                        (
-                            
-                                <li key={index} >
-                                {data.name}&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="button" value="Info" onClick={()=>this.DemoFn(data.name,index)}/>&nbsp;&nbsp;
-                                <input type="button" value="X" data-key={index} onClick={this.deleteUser}/>&nbsp;&nbsp;
-                                <input type="button" value="edit"  onClick={()=>this.editUSer(data,index)}/>
-                                </li>
-                        ))
-                        }
-                </ul>
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                    <th>NO.</th>
+                                    <th>Name</th>
+                                    <th>Buttons</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {this.state.users.users_info.map((data,index)=>
+                                    (
+                                <tr key={index}>
+                                        <td>{index+1}</td>
+                                        <td>{data.name}</td>
+                                        <td><input type="button" className="btn btn-info" value="Info" onClick={()=>this.DemoFn(data.name,index)}/>&nbsp;&nbsp;
+                                        <input type="button" className="btn btn-warning" value="edit"  onClick={()=>this.editUSer(data,index)}/>&nbsp;&nbsp;
+                                        <input type="button"  className="btn btn-danger" value="X" data-key={index} onClick={this.deleteUser}/>
+                                        </td>
+                                </tr>
+                                ))
+                            }
+                            </tbody>
+
+                        </table>
+                </div>
             </div>
         );
     }

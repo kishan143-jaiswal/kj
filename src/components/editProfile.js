@@ -55,8 +55,8 @@ class EditProfile extends React.Component{
                     <div>
                         Name:<input type="text" ref={(ref)=>this.name=ref} defaultValue={this.state.data.name}  /><br/>
                         Email:<input type="text" ref={(ref)=>this.email=ref} defaultValue={this.state.data.email} /><br/>
-                        Address:<input type="text" ref={(ref)=>this.address=ref} defaultValue={this.state.data.address} /><br/>
-                        <input type="button" value="update" onClick={this.updateInfo} /><br/>
+                        Address:<input type="text" ref={(ref)=>this.address=ref} defaultValue={this.state.data.address} /><br/><br/>
+                        <input type="button" className="btn btn-primary" value="update" onClick={this.updateInfo} /><br/>
                      </div>
 
                 ) 
