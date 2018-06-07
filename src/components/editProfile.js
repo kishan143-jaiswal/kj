@@ -1,6 +1,5 @@
 import React from 'react';
 import bindfunc from '../util';
-import users_info from '../dummy_data/localData';
 import {Redirect} from 'react-router-dom';
 
 class EditProfile extends React.Component{
@@ -31,7 +30,7 @@ class EditProfile extends React.Component{
           address:this.address.value
       }
       for(let i=0 ; i<users_info.length; i++){
-          if(prop_index==i)
+          if(prop_index===i)
           {
             users_info[i]=new_users;
           }

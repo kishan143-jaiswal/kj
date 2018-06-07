@@ -17,7 +17,7 @@ class LoginForm extends React.Component{
     }
 
     logIn(user,pass){
-        if(user!="" && pass!=""){
+        if(user!=="" && pass!==""){
             for(let i=0;i<Mydata.data.length;i++)
              {
                 let u_data=Mydata.data[i];
@@ -54,7 +54,7 @@ class LoginForm extends React.Component{
                 <form style={{textAlign:"center"}}>
                <span className="h1_tag" > <h1>LOGIN-FORM</h1></span>
                  <div >
-                     UserName:<input type="text" 
+                     UserName:<input type="text"
                      name="uname" value={this.state.username} 
                      onChange={(text)=>this.setState({ username:text.target.value})}
                      placeholder="username" />

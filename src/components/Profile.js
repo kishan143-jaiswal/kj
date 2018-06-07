@@ -1,8 +1,6 @@
 import React from 'react';
 import bindfunc from '../util';
-import Dashboard from './Dashboard';
 import {Redirect} from 'react-router-dom';
-import users_info from '../dummy_data/localData';
 import '../css/profile.css'
 
 class Profile extends React.Component{

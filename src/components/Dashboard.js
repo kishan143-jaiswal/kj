@@ -1,17 +1,15 @@
 import React from 'react';
 import bindfunc from '../util';
 import {withRouter} from 'react-router-dom';
-import Profile from './Profile'
-import EditProfile from './editProfile'
-import users_info from '../dummy_data/localData';
 
 class Dashboard extends React.Component{
     constructor(props){
         super(props);
-        //localStorage.setItem('users_info',JSON.stringify(users_info));
+       // localStorage.setItem('users_info',JSON.stringify(users_info));
         this.state={
             users:JSON.parse(localStorage.getItem('users_info')),
         }
+       
         bindfunc.call(this,['DemoFn','addUser','deleteUser','editUSer'])
 
     }
